@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Haley Hankins — design + code</title>
+
+  <!-- Import Font -->
+  <link rel="stylesheet" href="assets/fonts/fonts.css">
+
+  <!-- Import Styles -->
+    <link href="./dist/output.css" rel="stylesheet">
+
+  <!-- Favicon + Meta -->
+  <link rel="icon" href="data:image/svg+xml;utf8,
+  <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'>
+    <rect width='64' height='64' rx='12' fill='%230D0D0D'/>
+    <path d='M18 20h28M18 32h28M18 44h28' stroke='%23B59A63' stroke-width='4' stroke-linecap='round'/>
+  </svg>">
+  <meta name="theme-color" content="#0D0D0D">
+  <meta property="og:title" content="Haley Hankins — Integrety + Humanity in Code">
+  <meta property="og:description" content="Intentional interfaces. Dark neutrals, warm beige, clean motion.">
+  <meta property="og:type" content="website">
+
+  
+</head>
+
+<body class="bg-paper text-ink font-body selection:bg-ink selection:text-paper">
+  <!-- Background blobs -->
+  <div class="noise"></div>
+
+  <!-- Header -->
+  <header class="fixed inset-x-0 top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-transparent">
+    <div class="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
+      <a href="#home" class="flex items-center gap-3 font-display text-lg sm:text-xl">
+        <img src="assets/images/HH_Logo_mark-black.png" alt="Haley Hankins Brand Mark" width="30" height="30" class="h-12 w-12" loading="eager" decoding="async" />
+        <span class="font-display leading-tight">
+          Haley&nbsp;Hankins
+        </span>
+      </a>
+
+      <div class="flex items-center gap-3">
+        <!-- Menu button -->
+        <button id="menuBtn" class="px-3 py-1 text-sm rounded-full
+                 bg-white text-ink
+                 border border-ink/60
+                 shadow-md
+                 hover:bg-sand/60
+                 transition">
+          Menu
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Overlay Menu -->
+  <aside id="overlay" class="fixed inset-0 z-30 hidden">
+    <div role="dialog" aria-modal="true" class="w-full h-full bg-paper/90 backdrop-blur flex flex-col">
+      <div class="mx-auto max-w-6xl w-full px-4 pt-24 pb-8">
+        <nav class="grid gap-4 text-3xl font-display tracking-wide">
+          <a class="hover:opacity-80" href="#home">01. Home</a>
+          <a class="hover:opacity-80" href="#work">02. Work</a>
+          <a class="hover:opacity-80" href="#about">03. About</a>
+          <a class="hover:opacity-80" href="#contact">04. Contact</a>
+        </nav>
+        <div class="mt-8 flex items-center gap-4 text-sm">
+          <a class="underline underline-offset-4 hover:opacity-80" href="#">↗ Instagram</a>
+          <a class="underline underline-offset-4 hover:opacity-80" href="#">↗ Behance</a>
+          <a class="underline underline-offset-4 hover:opacity-80" href="#">↗ GitHub</a>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main -->
+  <main id="home" class="relative">
+    <!-- HERO (theme-aware, overlay only in dark mode) -->
+    <section class="relative min-h-screen overflow-hidden px-6 bg-paper text-ink">
+      <!-- Background image (light + dark) -->
+      <div id="heroBg" class="absolute inset-0 bg-cover bg-center opacity-[0.9] scale-[1.08] blur-[6px] bg-[url('assets/images/bg_light.webp')]">
+      </div>
+
+      <!-- Content -->
+      <div class="relative z-10 flex items-center justify-center min-h-screen">
+        <div class="mx-auto max-w-5xl pt-32 pb-20 text-center">
+
+          <!-- Section index -->
+          <span class="absolute right-6 top-28 text-sm text-stone/80">01</span>
+
+          <!-- <p class="uppercase tracking-[0.25em] text-xs sm:text-sm text-gold/90">
+            The way we do business is changing.
+          </p> -->
+
+          <div class="mt-4 font-display text-[2.7rem] sm:text-[3.3rem] lg:text-[3.8rem] leading-[1.05]">
+            <span class="integritas-toggle block text-gold/90 text-[1.8rem] sm:text-[2rem] italic mb-1">
+              <span class="latin">integritas et humanitas</span>
+              <span class="english">integrity and humanity</span>
+            </span>
+
+            <h1 class="block text-[80px]">
+              I build thoughtful digital experiences for real people.
+            </h1>
+          </div>
+
+          <p class="mt-4
+         text-sm sm:text-base md:text-lg lg:text-xl
+         leading-relaxed
+         max-w-md sm:max-w-xl md:max-w-2xl lg:max-w-3xl
+         mx-auto
+         px-8 sm:px-0
+         text-stone/90">
+            I'm Haley Hankins — a Front-End Developer &amp; Designer crafting digital products that
+            prioritize integrity, accessibility, and meaningful connections while still embracing
+            the latest in technology.
+          </p>
+
+          <div class="mt-10 px-6 sm:px-0 flex flex-col sm:flex-row items-center justify-center gap-3 w-full">
+            <a href="#work" class="w-full sm:w-auto text-center
+            px-6 py-3 rounded-full bg-paper text-ink text-sm sm:text-base
+            shadow-lg border border-ink/70
+            hover:-translate-y-0.5 hover:bg-cream transition">
+              → See selected work
+            </a>
+
+            <a href="#about" class="w-full sm:w-auto text-center
+            px-6 py-3 rounded-full text-sm sm:text-base
+            border border-ink/80 bg-white/90 text-ink hover:bg-sand/60 shadow transition">
+              → More about me
+            </a>
+          </div>
+
+          <!-- Trusted by marquee -->
+          <div class="mt-16 sm:mt-20 overflow-hidden relative">
+            <p class="text-[11px] sm:text-xs uppercase tracking-[0.25em] text-stone/80 mb-4">
+              trusted by teams &amp; brands like
+            </p>
+
+            <div class="relative w-full overflow-hidden">
+              <div class="flex whitespace-nowrap marquee-track">
+                <!-- Row 1 -->
+                <div class="flex items-center gap-6 pr-10">
+                  <span class="px-4 py-2 rounded-full border border-ink/60 bg-paper text-xs text-ink shadow-sm">
+                    Enterprise product teams
+                  </span>
+                  <span class="px-4 py-2 rounded-full border border-ink/60 bg-paper text-xs text-ink shadow-sm">
+                    Marketing &amp; Brand Leads
+                  </span>
+                  <span class="px-4 py-2 rounded-full border border-ink/60 bg-paper text-xs text-ink shadow-sm">
+                    UX &amp; Dev Partners
+                  </span>
+                  <span class="px-4 py-2 rounded-full border border-ink/60 bg-paper text-xs text-ink shadow-sm">
+                    Agencies 
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- WORK -->
+    <section id="work" class="py-24 px-6 border-t border-ink/10 bg-cream/60">
+      <div class="mx-auto max-w-6xl">
+        <div class="flex items-end justify-between gap-6">
+          <div>
+            <p class="uppercase tracking-[0.25em] text-xs text-stone/80">Work</p>
+            <h2 class="brand-stripe font-display text-5xl sm:text-6xl">Selected projects</h2>
+          </div>
+          <span class="text-sm text-stone/80">02</span>
+        </div>
+
+        <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <article class="group rounded-2xl overflow-hidden border border-ink/10 bg-paper/80 shadow-sm">
+            <img class="pseries aspect-[4/3] object-contain object-center bg-gradient-to-br from-sand to-gold/30 group-hover:to-gold/50 transition-colors" src="assets/works/thumb/pseries-thumb.png" alt="Portfolio System"></img>
+            <div class="p-5">
+              <h3 class="font-display text-2xl">Dynamic CMS Systems (DotCMS)</h3>
+              <p class="opacity-80 text-sm">Design System &amp; Front-end</p>
+              <a href="#" class="inline-flex items-center gap-2 mt-3 text-sm underline underline-offset-4 hover:opacity-80">View case →</a>
+            </div>
+          </article>
+
+          <article class="group rounded-2xl overflow-hidden border border-ink/10 bg-paper/80 shadow-sm">
+            <img class="pseries aspect-[4/3] object-contain object-center bg-gradient-to-br from-sand to-gold/30 group-hover:to-gold/50 transition-colors" src="assets/works/thumb/email-close.png" alt="Portfolio System"></img>
+            <div class="p-5">
+              <h3 class="font-display text-2xl">Email Components</h3>
+              <p class="opacity-80 text-sm">Responsive, Accessibility Compliant</p>
+              <a href="#" class="inline-flex items-center gap-2 mt-3 text-sm underline underline-offset-4 hover:opacity-80">View case →</a>
+            </div>
+          </article>
+
+          <article class="group rounded-2xl overflow-hidden border border-ink/10 bg-paper/80 shadow-sm">
+            <img class="pseries aspect-[4/3] object-contain object-center bg-gradient-to-br from-sand to-gold/30 group-hover:to-gold/50 transition-colors" src="assets/works/thumb/c1lp-thumb.png" alt="Portfolio System"></img>
+            <div class="p-5">
+              <h3 class="font-display text-2xl">Landing Page</h3>
+              <p class="opacity-80 text-sm">Performance, Responsive, Accessibility Compliant</p>
+              <a href="#" class="inline-flex items-center gap-2 mt-3 text-sm underline underline-offset-4 hover:opacity-80">View case →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT (updated, centered heading + index right + reversed columns) -->
+    <section id="about" class="py-24 px-6">
+      <div class="mx-auto max-w-6xl">
+
+        <!-- Centered heading with right-aligned index -->
+        <div class="relative mb-12 text-center">
+          <span class="absolute right-0 top-0 text-sm text-stone/70">
+            03
+          </span>
+
+          <p class="uppercase tracking-[0.25em] text-xs text-stone/80">
+            About
+          </p>
+
+          <h2 class="brand-stripe font-display text-5xl sm:text-6xl inline-block">
+            Hi, I'm Haley
+          </h2>
+        </div>
+
+        <!-- Content layout (image left, text right on desktop) -->
+        <div class="flex flex-col lg:flex-col items-center lg:items-start gap-10 relative group">
+
+          <!-- Right column: Text -->
+          <div class="flex-1">
+            <p class="text-lg leading-relaxed text-stone/90">
+              I'm a Front-End Developer & Designer based in Texas. My work blends product thinking with clean motion
+              and an editorial aesthetic. I care about speed, accessibility, and maintainable systems. Offscreen,
+              I'm a hockey goalie who likes building things.
+            </p>
+
+            <div class="mt-8 flex gap-3 items-center justify-center justify-items-center">
+              <a href="#contact" class="px-5 py-3 rounded-full bg-ink text-paper hover:opacity-90 transition">
+                Contact me
+              </a>
+
+              <a href="#" class="px-5 py-3 rounded-full border border-ink/30 hover:bg-sand/60 transition">
+                ↓ Resume
+              </a>
+            </div>
+          </div>
+
+          <!-- Left column: Image -->
+          <div class="flex flex-col md:flex-row gap-2 md:gap-4">
+            <figure class="max-w-md rounded-2xl overflow-hidden border border-ink/10 bg-paper/80 shadow-sm">
+            <img src="assets/images/haley-portfolio.jpeg" alt="Haley Hankins" class="w-full h-full object-cover" loading="lazy" decoding="async" />
+          </figure>
+          <figure class="max-w-md rounded-2xl overflow-hidden border border-ink/10 bg-paper/80 shadow-sm relative">
+            <img src="assets/images/haley-braces.jpeg" alt="Haley Hankins" class="w-full h-full object-cover" loading="lazy" decoding="async" />
+            <span id="head-tag-span" class="absolute inset-0 flex items-center justify-center pointer-events-none
+    opacity-0 transition-opacity duration-100 text-white font-semibold">Head tag... get it? </span>
+          </figure>
+          <figure class="max-w-md rounded-2xl overflow-hidden border border-ink/10 bg-paper/80 shadow-sm">
+            <img src="assets/images/haley-goalie-resize.jpg" alt="Haley Hankins" class="w-full h-full object-cover" loading="lazy" decoding="async" />
+          </figure></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-24 px-6 border-t bg-cream/60 border-ink/10">
+      <div class="mx-auto max-w-3xl">
+        <div class="flex items-end justify-between gap-6">
+          <div>
+            <p class="uppercase tracking-[0.25em] text-xs text-stone/80">Contact</p>
+            <h2 class="brand-stripe font-display text-5xl sm:text-6xl">Let's work together</h2>
+          </div>
+          <span class="text-sm text-stone/80">04</span>
+        </div>
+
+        <form class="mt-8 grid gap-4">
+          <label class="grid gap-2">
+            <span class="text-sm opacity-90">Your email</span>
+            <input type="email" required class="px-4 py-3 rounded-xl border border-ink/40 bg-paper/90 focus:outline-none focus:ring-2 focus:ring-gold/70" placeholder="you@example.com">
+          </label>
+          <label class="grid gap-2">
+            <span class="text-sm opacity-90">Message</span>
+            <textarea rows="5" required class="px-4 py-3 rounded-xl border border-ink/40 bg-paper/90 focus:outline-none focus:ring-2 focus:ring-gold/70" placeholder="Tell me about your project…"></textarea>
+          </label>
+          <button class="justify-self-start px-5 py-3 rounded-full bg-ink text-paper hover:opacity-90 transition">
+            Send →
+          </button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="py-10 text-center text-sm opacity-80 border-t border-ink/10">
+    <p>Designed &amp; coded by Haley Hankins · <span id="year"></span></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
