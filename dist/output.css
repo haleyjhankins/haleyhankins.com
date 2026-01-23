@@ -577,6 +577,9 @@
   .text-center {
     text-align: center;
   }
+  .text-start {
+    text-align: start;
+  }
   .font-body {
     font-family: var(--font-body);
   }
