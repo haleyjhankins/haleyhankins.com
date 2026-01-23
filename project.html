@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects - Dynamic CMS Systems (DotCMS)</title>
+
+  <!-- Import Font -->
+  <link rel="stylesheet" href="assets/fonts/fonts.css">
+
+  <!-- Import Styles -->
+    <link href="./dist/output.css" rel="stylesheet">
+
+  <!-- Favicon + Meta -->
+  <link rel="icon" href="data:image/svg+xml;utf8,
+  <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'>
+    <rect width='64' height='64' rx='12' fill='%230D0D0D'/>
+    <path d='M18 20h28M18 32h28M18 44h28' stroke='%23B59A63' stroke-width='4' stroke-linecap='round'/>
+  </svg>">
+  <meta name="theme-color" content="#0D0D0D">
+  <meta property="og:title" content="Haley Hankins — Integrety + Humanity in Code">
+  <meta property="og:description" content="Intentional interfaces. Dark neutrals, warm beige, clean motion.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  
+</head>
+
+<body class="bg-paper text-ink font-body selection:bg-ink selection:text-paper">
+  <!-- Background blobs -->
+  <div class="noise"></div>
+
+  <!-- Header -->
+  <header class="fixed inset-x-0 top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-transparent">
+    <div class="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3 font-display text-lg sm:text-xl">
+        <img src="assets/images/HH_Logo_mark-black.png" alt="Haley Hankins Brand Mark" width="30" height="30" class="h-12 w-12" loading="eager" decoding="async" />
+        <span class="font-display leading-tight">
+          Haley&nbsp;Hankins
+        </span>
+      </a>
+
+      <div class="flex items-center gap-3">
+        <!-- Menu button -->
+        <button id="menuBtn" class="px-3 py-1 text-sm rounded-full
+                 bg-white text-ink
+                 border border-ink/60
+                 shadow-md
+                 hover:bg-sand/60
+                 transition">
+          Menu
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Overlay Menu -->
+  <aside id="overlay" class="fixed inset-0 z-30 hidden">
+    <div role="dialog" aria-modal="true" class="w-full h-full bg-paper/90 backdrop-blur flex flex-col">
+      <div class="mx-auto max-w-6xl w-full px-4 pt-24 pb-8">
+        <nav class="grid gap-4 text-3xl font-display tracking-wide">
+          <a class="hover:opacity-80" href="index.html">01. Home</a>
+          <a class="hover:opacity-80" href="index.html#work">02. Work</a>
+          <a class="hover:opacity-80" href="index.html#about">03. About</a>
+          <a class="hover:opacity-80" href="index.html#contact">04. Contact</a>
+        </nav>
+        <div class="mt-8 flex items-center gap-4 text-sm">
+          <a class="underline underline-offset-4 hover:opacity-80" href="https://www.instagram.com/chairmanofthebored91/" target="blank">↗ Instagram</a>
+          <a class="underline underline-offset-4 hover:opacity-80" href="https://www.linkedin.com/in/haleyjhankins/" target="blank">↗ LinkedIn</a>
+          <a class="underline underline-offset-4 hover:opacity-80" href="https://github.com/haleyjhankins" target="blank">↗ GitHub</a>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+<main id="project" class="relative">
+  <div class="container mx-auto px-4 py-8">
+    <div class="flex flex-col md:flex-row gap-8 pt-32 pb-20">
+      <div class="md:w-1/2 flex justify-center">
+        <a href="https://www.armstrongair.com/products/proseries-lowgwp/" target="_blank" rel="noopener noreferrer">
+          <img src="assets/works/full/pro-series-full.png" alt="Project Image" class="w-70 h-auto rounded-lg shadow-lg">
+        </a>
+      </div>
+      <div class="md:w-1/2 flex items-start">
+        <div>
+          <h2 class=" text-2xl md:text-5xl font-semibold mb-4 font-display leading-none">Dynamic CMS Systems (DotCMS)</h2>
+          <p class="text-base leading-relaxed">This landing page was built using DotCMS, a powerful content management system. It features a responsive design and integrates seamlessly with the Armstrong Air brand identity. I worked closely with the product owner to ensure that the backend was simple to update, and that the content could be managed efficiently by non-technical users.</p>
+          <p class="mt-4 text-sm italic">Property of Lennox.</p>
+          <div>
+            <h3 class="mt-4">Technologies Used:</h3>
+          <ul class="list-disc list-inside mt-2">
+            <li>DotCMS w Velocity Scripting</li>
+            <li>HTML5 & CSS3</li>
+            <li>Tailwind</li>
+            <li>JavaScript</li>
+            <li>Responsive Web Principals</li>
+            <li>Wave Accessibility Tool (Browser Extension)</li>
+            <li>Lighthouse to measure performance (Browser Extension)</li>
+            </ul>
+          <a href="index.html" class="inline-block mt-4 px-4 py-2 text-sm rounded-full bg-white text-ink border border-ink/60 shadow-md hover:bg-sand/60 transition">Back to Homepage</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+  <footer class="py-10 text-center text-sm opacity-80 border-t border-ink/10">
+    <p>Designed &amp; coded by Haley Hankins · <span id="year"></span></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
