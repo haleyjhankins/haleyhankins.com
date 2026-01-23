@@ -83,7 +83,7 @@
         <div class="mx-auto max-w-5xl py-16 sm:py-20 lg:py-24 text-center">
 
           <!-- Section index -->
-          <span class="absolute right-6 top-28 text-sm text-stone/80">01</span>
+          <span class="absolute right-6 top-28 text-sm text-stone/80 hidden sm:block">01</span>
 
           <!-- <p class="uppercase tracking-[0.25em] text-xs sm:text-sm text-gold/90">
             The way we do business is changing.
@@ -126,32 +126,7 @@
             </a>
           </div>
 
-          <!-- Trusted by marquee -->
-          <div class="mt-10 sm:mt-12 overflow-hidden relative">
-            <p class="text-[11px] sm:text-xs uppercase tracking-[0.25em] text-stone/80 mb-4">
-              trusted by teams &amp; brands like
-            </p>
-
-            <div class="relative w-full overflow-hidden">
-              <div class="flex whitespace-nowrap marquee-track">
-                <!-- Row 1 -->
-                <div class="flex items-center gap-6 pr-10">
-                  <span class="px-4 py-2 rounded-full border border-ink/60 bg-paper text-xs text-ink shadow-sm">
-                    Enterprise product teams
-                  </span>
-                  <span class="px-4 py-2 rounded-full border border-ink/60 bg-paper text-xs text-ink shadow-sm">
-                    Marketing &amp; Brand Leads
-                  </span>
-                  <span class="px-4 py-2 rounded-full border border-ink/60 bg-paper text-xs text-ink shadow-sm">
-                    UX &amp; Dev Partners
-                  </span>
-                  <span class="px-4 py-2 rounded-full border border-ink/60 bg-paper text-xs text-ink shadow-sm">
-                    Agencies 
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
+          
 
         </div>
       </div>
@@ -165,7 +140,7 @@
             <p class="uppercase tracking-[0.25em] text-xs text-stone/80">Work</p>
             <h2 class="brand-stripe font-display text-3xl md:text-6xl">Selected projects</h2>
           </div>
-          <span class="text-sm text-stone/80">02</span>
+          <span class="text-sm text-stone/80 hidden sm:block">02</span>
         </div>
 
         <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -205,7 +180,7 @@
 
         <!-- Centered heading with right-aligned index -->
         <div class="relative mb-12 text-center">
-          <span class="absolute right-0 top-0 text-sm text-stone/70">
+          <span class="absolute right-0 top-0 text-sm text-stone/70 hidden sm:block">
             03
           </span>
 
@@ -257,6 +232,48 @@
       </div>
     </section>
 
+    <!-- Trusted by marquee -->
+          <div class="mt-10 sm:mt-12 overflow-hidden relative text-center">
+            <p class="text-[11px] sm:text-xs uppercase tracking-[0.25em] text-stone/80 mb-4">
+              trusted by teams &amp; brands like
+            </p>
+
+            <div class="relative w-full overflow-hidden pb-6 flex justify-center">
+              <div class="flex whitespace-nowrap marquee-track">
+                <!-- Row 1 -->
+                <div class="flex items-center gap-6 pr-10">
+                  <span class="px-4 py-2 rounded-full border border-ink/60 bg-paper text-xs text-ink shadow-sm">
+                    Enterprise product teams
+                  </span>
+                  <span class="px-4 py-2 rounded-full border border-ink/60 bg-paper text-xs text-ink shadow-sm">
+                    Marketing &amp; Brand Leads
+                  </span>
+                  <span class="px-4 py-2 rounded-full border border-ink/60 bg-paper text-xs text-ink shadow-sm">
+                    UX &amp; Dev Partners
+                  </span>
+                  <span class="px-4 py-2 rounded-full border border-ink/60 bg-paper text-xs text-ink shadow-sm">
+                    Agencies 
+                  </span>
+                </div>
+                <!-- Row 1 Duplicate -->
+                <div class="flex items-center gap-6 pr-10">
+                  <span class="px-4 py-2 rounded-full border border-ink/60 bg-paper text-xs text-ink shadow-sm">
+                    Enterprise product teams
+                  </span>
+                  <span class="px-4 py-2 rounded-full border border-ink/60 bg-paper text-xs text-ink shadow-sm">
+                    Marketing &amp; Brand Leads
+                  </span>
+                  <span class="px-4 py-2 rounded-full border border-ink/60 bg-paper text-xs text-ink shadow-sm">
+                    UX &amp; Dev Partners
+                  </span>
+                  <span class="px-4 py-2 rounded-full border border-ink/60 bg-paper text-xs text-ink shadow-sm">
+                    Agencies 
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
     <!-- CONTACT -->
     <section id="contact" class="py-16 sm:py-20 lg:py-24 px-6 border-t bg-cream/60 border-ink/10">
       <div class="mx-auto max-w-3xl">
@@ -265,7 +282,7 @@
             <p class="uppercase tracking-[0.25em] text-xs text-stone/80">Contact</p>
             <h2 class="brand-stripe font-display text-3xl md:text-6xl">Let's work together</h2>
           </div>
-          <span class="text-sm text-stone/80">04</span>
+          <span class="text-sm text-stone/80 hidden sm:block">04</span>
         </div>
 
         <form name="contact" netlify method="POST" data-netlify="true" netlify-honeypot="bot-field" class="mt-8 grid gap-4">
