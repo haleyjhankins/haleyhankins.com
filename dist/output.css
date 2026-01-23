@@ -559,6 +559,9 @@
   .py-16 {
     padding-block: calc(var(--spacing) * 16);
   }
+  .pt-20 {
+    padding-top: calc(var(--spacing) * 20);
+  }
   .pt-24 {
     padding-top: calc(var(--spacing) * 24);
   }
@@ -921,6 +924,12 @@
       line-height: var(--tw-leading, var(--text-base--line-height));
     }
   }
+  .sm\:text-lg {
+    @media (width >= 40rem) {
+      font-size: var(--text-lg);
+      line-height: var(--tw-leading, var(--text-lg--line-height));
+    }
+  }
   .sm\:text-sm {
     @media (width >= 40rem) {
       font-size: var(--text-sm);
@@ -969,12 +978,6 @@
     @media (width >= 48rem) {
       font-size: var(--text-6xl);
       line-height: var(--tw-leading, var(--text-6xl--line-height));
-    }
-  }
-  .md\:text-lg {
-    @media (width >= 48rem) {
-      font-size: var(--text-lg);
-      line-height: var(--tw-leading, var(--text-lg--line-height));
     }
   }
   .md\:text-\[2rem\] {
