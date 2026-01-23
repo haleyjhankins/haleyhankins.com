@@ -268,8 +268,15 @@
           <span class="text-sm text-stone/80">04</span>
         </div>
 
-        <form action="https://formsubmit.co/contact@haleyhankins.com" method="POST" class="mt-8 grid gap-4">
-          <input type="hidden" name="_next" value="https://haleyhankins.com/#contact">
+        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="#contact" class="mt-8 grid gap-4">
+          <input type="hidden" name="form-name" value="contact">
+          <p class="hidden">
+            <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+          </p>
+          <label class="grid gap-2">
+            <span class="text-sm opacity-90">Your name</span>
+            <input type="text" name="name" required class="px-4 py-3 rounded-xl border border-ink/40 bg-paper/90 focus:outline-none focus:ring-2 focus:ring-gold/70" placeholder="Your name">
+          </label>
           <label class="grid gap-2">
             <span class="text-sm opacity-90">Your email</span>
             <input type="email" name="email" required class="px-4 py-3 rounded-xl border border-ink/40 bg-paper/90 focus:outline-none focus:ring-2 focus:ring-gold/70" placeholder="you@example.com">
