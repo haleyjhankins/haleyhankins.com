@@ -10,8 +10,6 @@
     --color-white: #fff;
     --spacing: 0.25rem;
     --container-md: 28rem;
-    --container-xl: 36rem;
-    --container-2xl: 42rem;
     --container-3xl: 48rem;
     --container-5xl: 64rem;
     --container-6xl: 72rem;
@@ -29,8 +27,6 @@
     --text-2xl--line-height: calc(2 / 1.5);
     --text-3xl: 1.875rem;
     --text-3xl--line-height: calc(2.25 / 1.875);
-    --text-4xl: 2.25rem;
-    --text-4xl--line-height: calc(2.5 / 2.25);
     --text-5xl: 3rem;
     --text-5xl--line-height: 1;
     --text-6xl: 3.75rem;
@@ -325,8 +321,8 @@
   .h-full {
     height: 100%;
   }
-  .min-h-screen {
-    min-height: 100vh;
+  .min-h-0 {
+    min-height: calc(var(--spacing) * 0);
   }
   .w-12 {
     width: calc(var(--spacing) * 12);
@@ -346,8 +342,11 @@
   .max-w-6xl {
     max-width: var(--container-6xl);
   }
-  .max-w-\[24ch\] {
-    max-width: 24ch;
+  .max-w-\[22ch\] {
+    max-width: 22ch;
+  }
+  .max-w-\[36ch\] {
+    max-width: 36ch;
   }
   .max-w-md {
     max-width: var(--container-md);
@@ -408,6 +407,9 @@
   }
   .overflow-hidden {
     overflow: hidden;
+  }
+  .overflow-visible {
+    overflow: visible;
   }
   .scroll-smooth {
     scroll-behavior: smooth;
@@ -540,9 +542,6 @@
   .px-6 {
     padding-inline: calc(var(--spacing) * 6);
   }
-  .px-8 {
-    padding-inline: calc(var(--spacing) * 8);
-  }
   .py-1 {
     padding-block: calc(var(--spacing) * 1);
   }
@@ -561,6 +560,9 @@
   .py-24 {
     padding-block: calc(var(--spacing) * 24);
   }
+  .pt-16 {
+    padding-top: calc(var(--spacing) * 16);
+  }
   .pt-24 {
     padding-top: calc(var(--spacing) * 24);
   }
@@ -570,11 +572,17 @@
   .pr-10 {
     padding-right: calc(var(--spacing) * 10);
   }
+  .pb-6 {
+    padding-bottom: calc(var(--spacing) * 6);
+  }
   .pb-8 {
     padding-bottom: calc(var(--spacing) * 8);
   }
   .pb-20 {
     padding-bottom: calc(var(--spacing) * 20);
+  }
+  .pb-24 {
+    padding-bottom: calc(var(--spacing) * 24);
   }
   .text-center {
     text-align: center;
@@ -655,6 +663,13 @@
   }
   .text-pretty {
     text-wrap: pretty;
+  }
+  .break-words {
+    overflow-wrap: break-word;
+  }
+  .hyphens-auto {
+    -webkit-hyphens: auto;
+    hyphens: auto;
   }
   .whitespace-normal {
     white-space: normal;
@@ -852,14 +867,19 @@
       margin-top: calc(var(--spacing) * 20);
     }
   }
-  .sm\:max-w-\[32ch\] {
+  .sm\:min-h-screen {
     @media (width >= 40rem) {
-      max-width: 32ch;
+      min-height: 100vh;
     }
   }
-  .sm\:max-w-xl {
+  .sm\:max-w-\[30ch\] {
     @media (width >= 40rem) {
-      max-width: var(--container-xl);
+      max-width: 30ch;
+    }
+  }
+  .sm\:max-w-\[52ch\] {
+    @media (width >= 40rem) {
+      max-width: 52ch;
     }
   }
   .sm\:grid-cols-2 {
@@ -875,6 +895,27 @@
   .sm\:px-0 {
     @media (width >= 40rem) {
       padding-inline: calc(var(--spacing) * 0);
+    }
+  }
+  .sm\:pt-24 {
+    @media (width >= 40rem) {
+      padding-top: calc(var(--spacing) * 24);
+    }
+  }
+  .sm\:pt-32 {
+    @media (width >= 40rem) {
+      padding-top: calc(var(--spacing) * 32);
+    }
+  }
+  .sm\:pb-12 {
+    @media (width >= 40rem) {
+      padding-bottom: calc(var(--spacing) * 12);
+    }
+  }
+  .sm\:text-3xl {
+    @media (width >= 40rem) {
+      font-size: var(--text-3xl);
+      line-height: var(--tw-leading, var(--text-3xl--line-height));
     }
   }
   .sm\:text-6xl {
@@ -917,11 +958,6 @@
       width: calc(1/2 * 100%);
     }
   }
-  .md\:max-w-2xl {
-    @media (width >= 48rem) {
-      max-width: var(--container-2xl);
-    }
-  }
   .md\:flex-row {
     @media (width >= 48rem) {
       flex-direction: row;
@@ -930,12 +966,6 @@
   .md\:gap-4 {
     @media (width >= 48rem) {
       gap: calc(var(--spacing) * 4);
-    }
-  }
-  .md\:text-4xl {
-    @media (width >= 48rem) {
-      font-size: var(--text-4xl);
-      line-height: var(--tw-leading, var(--text-4xl--line-height));
     }
   }
   .md\:text-5xl {
@@ -958,11 +988,6 @@
   .md\:text-\[50px\] {
     @media (width >= 48rem) {
       font-size: 50px;
-    }
-  }
-  .lg\:max-w-3xl {
-    @media (width >= 64rem) {
-      max-width: var(--container-3xl);
     }
   }
   .lg\:grid-cols-3 {
